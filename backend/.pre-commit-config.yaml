@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Use the latest version of pre-commit-hooks
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.11.0 # Use the latest version of ruff
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-zero]
+        additional_dependencies: [ruff==0.11.0]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0 # Use the latest version of mypy
+    hooks:
+      - id: mypy
+        additional_dependencies: [mypy==1.15.0]

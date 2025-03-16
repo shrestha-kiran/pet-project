@@ -1,3 +1,0 @@
-# code to generate the file: poetry config virtualenvs.in-project true --local
-[virtualenvs]
-in-project = true
